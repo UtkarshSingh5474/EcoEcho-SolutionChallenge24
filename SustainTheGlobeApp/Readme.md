@@ -18,7 +18,7 @@ To install the app, download the [APK File](https://github.com/UtkarshSingh5474/
 
 ## How to Use
 
-To use CAREitable, follow these steps:
+To setup EcoEcho App locally, follow these steps:
 
 1) Clone the repository to your local machine using git:
 git clone https://github.com/UtkarshSingh5474/EcoEcho-SolutionChallenge24/tree/main/SustainTheGlobeApp
