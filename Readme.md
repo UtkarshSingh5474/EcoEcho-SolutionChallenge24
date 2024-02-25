@@ -22,38 +22,42 @@ Through EcoEcho, users receive a tailored set of tasks each day, week, and month
 
 The app provides a calming and positive user interface, encouraging engagement and making sustainability accessible to everyone. Users can upload photos as proof of task completion, fostering accountability and creating a sense of accomplishment.
 
-## High Level Technical Components and Their Responsibilities:
-**1. Backend:**
+# README
 
--Cloud Firestore: Database management for storing user data, tasks, and community interactions.
--Firebase Authentication: Secure user authentication to access the app's features.
--Firebase Storage: Storage of media files such as task completion photos.
--Cloud Functions: Executes on the cloud, responsible for task generation based on Gemini 1.0 Pro and other dynamic updates.
+## High-Level Technical Components and Their Responsibilities:
 
-**2. Frontend:**
-   **2.1. Android Native (XML + Java):**
-      -Develops the Android app interface for users to interact with tasks, community, and       
-     profiles.
-      -Languages: Java for backend logic, XML for UI design.
-      -Technologies: Android Native development tools.
+### 1. Backend:
 
-   **2.2 React:**
-      -Develops the Progressive Web App (PWA) accessible on iOS, macOS, Windows, and                   
-        web browsers.
-      -Languages: JavaScript for frontend logic.
-      -Technologies: React framework for PWA development.
+- **Cloud Firestore:**
+  - Database management for storing user data, tasks, and community interactions.
+- **Firebase Authentication:**
+  - Secure user authentication to access the app's features.
+- **Firebase Storage:**
+  - Storage of media files such as task completion photos.
+- **Cloud Functions:**
+  - Executes on the cloud, responsible for task generation based on Gemini 1.0 Pro and other dynamic updates.
 
-**3. Technologies:**
--Gemini 1.0 Pro: Utilized within Cloud Functions for task generation.
+### 2. Frontend:
 
--Google Maps API: Used within backend logic (Cloud Functions) to generate location-based tasks.
+#### 2.1. Android Native (XML + Java):
+- Develops the Android app interface for users to interact with tasks, community, and profiles.
+- Languages: Java for backend logic, XML for UI design.
+- Technologies: Android Native development tools.
 
--Google Material Design: Integrated into Android Native and Progressive Web App UI components ensuring consistency and user-friendliness..
+#### 2.2. React:
+- Develops the Progressive Web App (PWA) accessible on iOS, macOS, Windows, and web browsers.
+- Languages: JavaScript for frontend logic.
+- Technologies: React framework for PWA development.
 
--Google Analytics: Integrated into both Android Native and Progressive Web Apps for tracking user behavior.
+### 3. Technologies:
 
--Cloud Messaging: Utilized within backend logic (Cloud Functions) to trigger notifications based on user activity.
-
-EcoEcho also includes a community aspect, allowing users to connect with friends, share achievements, and participate in discussions. A public profile and leaderboard showcase users' completed tasks, inspiring friendly competition and mutual encouragement.
-
-By offering a holistic solution that combines personalized task suggestions, task verification, and community engagement, EcoEcho aims to empower individuals to make meaningful contributions to environmental and social causes. Together, we can create a more sustainable future, one small action at a time.
+- **Gemini 1.0 Pro:**
+  - Utilized within Cloud Functions for task generation.
+- **Google Maps API:**
+  - Used within backend logic (Cloud Functions) to generate location-based tasks.
+- **Google Material Design:**
+  - Integrated into Android Native and Progressive Web App UI components ensuring consistency and user-friendliness.
+- **Google Analytics:**
+  - Integrated into both Android Native and Progressive Web Apps for tracking user behavior.
+- **Cloud Messaging:**
+  - Utilized within backend logic (Cloud Functions) to trigger notifications based on user activity.
