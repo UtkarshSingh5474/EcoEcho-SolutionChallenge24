@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ProfileFragment"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/aboutFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Feed,"
+            android:textColor="@color/black"
+            android:textSize="44sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subtitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTV"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="See What Others Have Done!"
+            android:textColor="@color/grey_subtext"
+            android:textSize="14sp" />
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtitleTv"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/nearbyChip"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Nearby"
+                android:textAppearance="@style/ChipUncheckedText"
+                android:textColor="@color/chipgroup_textcolor_state"
+                app:chipBackgroundColor="@color/primary_light"
+                app:chipStrokeColor="@color/chipgroup_textcolor_state"
+                app:ensureMinTouchTargetSize="true" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/countryChip"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipStrokeColor="@color/chipgroup_textcolor_state"
+                android:text="Country"
+                android:textColor="@color/chipgroup_textcolor_state"
+                app:chipBackgroundColor="@color/primary_light"
+                app:ensureMinTouchTargetSize="true" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/worldChip"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipStrokeColor="@color/chipgroup_textcolor_state"
+                android:text="World"
+                android:textColor="@color/chipgroup_textcolor_state"
+                app:chipBackgroundColor="@color/primary_light"
+                app:ensureMinTouchTargetSize="true" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+    </LinearLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_below="@id/aboutFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/noEventsCard"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Posts\nTry Reloading"
+                android:layout_marginStart="16dp"
+                android:textSize="44sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/grey_subtext"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="240dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/empty_loading"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/eventsRecyclerView"
+                android:visibility="gone"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

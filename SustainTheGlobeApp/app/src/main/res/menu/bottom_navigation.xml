@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_leaderboard"
+        android:icon="@drawable/ic_leaderboard"
+        android:title="Rank" />
+
+    <item
+        android:id="@+id/nav_task"
+        android:icon="@drawable/ic_task"
+        android:title="My Tasks" />
+
+    <item
+        android:icon="@drawable/ic_feed"
+        android:title="Feed" />
+    <item
+        android:icon="@drawable/ic_user"
+        android:title="Profile" />
+</menu>

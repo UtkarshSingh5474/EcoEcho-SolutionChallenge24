@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="My\nTasks,"
+            android:textColor="@color/black"
+            android:textSize="44sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subtitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTV"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Your Currently Assigned Tasks!"
+            android:textColor="@color/grey_subtext"
+            android:textSize="14sp" />
+
+        <LinearLayout
+
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/subtitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            tools:context=".fragment.MyTasksFragment">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Tasks"
+                android:textSize="18sp"
+                android:fontFamily="@font/ubuntu_bold"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/task1_CV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:text="@string/hello_blank_fragment"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/primary_light"
+                >
+
+                <LinearLayout
+
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <!-- Task Logo -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="0.2dp">
+                        <ImageView
+                            android:id="@+id/task1_catergory_logo"
+                            android:padding="3dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_cat_default"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Task Details -->
+                    <LinearLayout
+                        android:id="@+id/task1_details"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/task1_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="Task Title"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/task1_points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="+3 Points"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu"
+                            android:text="Tap For More Info"
+                            android:textColor="@color/grey_subtext"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/task1_btn"
+                        android:clickable="true"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp">
+                        <ImageView
+                            android:id="@+id/task1_btnIV"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:src="@drawable/ic_tick"
+                            android:visibility="gone" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/task2_CV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:text="@string/hello_blank_fragment"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/primary_light"
+                >
+
+                <LinearLayout
+
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <!-- Task Logo -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="0.2dp">
+                        <ImageView
+                            android:id="@+id/task2_catergory_logo"
+                            android:padding="3dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_cat_default"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Task Details -->
+                    <LinearLayout
+                        android:id="@+id/task2_details"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/task2_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="Task Title"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/task2_points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="+3 Points"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu"
+                            android:text="Tap For More Info"
+                            android:textColor="@color/grey_subtext"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/task2_btn"
+                        android:clickable="true"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp">
+                        <ImageView
+                            android:id="@+id/task2_btnIV"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:src="@drawable/ic_tick"
+                            android:visibility="gone" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Tasks"
+                android:textSize="18sp"
+                android:fontFamily="@font/ubuntu_bold"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:clickable="true"
+                android:id="@+id/task3_CV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/hello_blank_fragment"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/medium_task"
+                >
+
+                <LinearLayout
+
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <!-- Task Logo -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="0.2dp">
+                        <ImageView
+                            android:id="@+id/task3_catergory_logo"
+                            android:padding="3dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_cat_default"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Task Details -->
+                    <LinearLayout
+                        android:id="@+id/task3_details"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/task3_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="Task Title"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/task3_points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="+3 Points"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu"
+                            android:text="Tap For More Info"
+                            android:textColor="@color/grey_subtext"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/task3_btn"
+                        android:clickable="true"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp">
+                        <ImageView
+                            android:id="@+id/task3_btnIV"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:src="@drawable/ic_tick"
+                            android:visibility="gone" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly Tasks"
+                android:textSize="18sp"
+                android:fontFamily="@font/ubuntu_bold"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/task4_CV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:text="@string/hello_blank_fragment"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/hard_task"
+                android:layout_marginHorizontal="20dp"
+                >
+
+                <LinearLayout
+
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <!-- Task Logo -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="0.2dp">
+                        <ImageView
+                            android:id="@+id/task4_catergory_logo"
+                            android:padding="3dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_cat_default"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Task Details -->
+                    <LinearLayout
+                        android:id="@+id/task4_details"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/task4_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="Task Title"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/task4_points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="+3 Points"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu"
+                            android:text="Tap For More Info"
+                            android:textColor="@color/grey_subtext"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/task4_btn"
+                        android:clickable="true"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp">
+                        <ImageView
+                            android:id="@+id/task4_btnIV"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:src="@drawable/ic_tick"
+                            android:visibility="gone" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    </ScrollView>

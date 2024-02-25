@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.LeaderboardFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/aboutFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Leaderboard,"
+            android:textColor="@color/black"
+            android:textSize="44sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subtitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTV"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Top Contributors to a Sustainable Future"
+            android:textColor="@color/grey_subtext"
+            android:textSize="14sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtitleTv"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/nearbyChip"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Nearby"
+                android:textAppearance="@style/ChipUncheckedText"
+                android:textColor="@color/chipgroup_textcolor_state"
+                app:chipBackgroundColor="@color/primary_light"
+                app:chipStrokeColor="@color/chipgroup_textcolor_state"
+                app:ensureMinTouchTargetSize="true"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/countryChip"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:textColor="@color/chipgroup_textcolor_state"
+                app:chipBackgroundColor="@color/primary_light"
+                app:chipStrokeColor="@color/chipgroup_textcolor_state"
+                app:ensureMinTouchTargetSize="true"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/worldChip"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="World"
+                android:textColor="@color/chipgroup_textcolor_state"
+                app:chipBackgroundColor="@color/primary_light"
+                app:chipStrokeColor="@color/chipgroup_textcolor_state"
+                app:ensureMinTouchTargetSize="true"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/followersChip"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                android:textColor="@color/chipgroup_textcolor_state"
+                app:chipBackgroundColor="@color/primary_light"
+                app:chipStrokeColor="@color/chipgroup_textcolor_state"
+                app:ensureMinTouchTargetSize="true"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/noFollowers"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You are not following anyone"
+            android:layout_marginStart="16dp"
+            android:textSize="44sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/grey_subtext"
+            android:fontFamily="@font/ubuntu_medium"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/topThreeLL"
+        android:layout_below="@id/aboutFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+        <LinearLayout
+            android:id="@+id/secondPlaceLL"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_default_profile"
+                app:civ_border_color="@color/silver"
+                app:civ_border_width="1dp"/>
+            <ImageView
+                android:layout_marginTop="-5dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_medal_second"/>
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_points"/>
+                <TextView
+                    android:id="@+id/secondUserPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textSize="15dp"
+                    android:text="4"
+                    />
+            </LinearLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/secondPlaceTV"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:text="Name"
+                android:lines="1"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/firstPlaceLL"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/firstPlaceIV"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_default_profile"
+                app:civ_border_color="@color/gold"
+                app:civ_border_width="1dp"/>
+            <ImageView
+                android:layout_marginTop="-6dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_medal_first"/>
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_points"/>
+                <TextView
+                    android:id="@+id/firstUserPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textSize="20sp"
+                    android:text="4"
+                    />
+            </LinearLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/firstPlaceTV"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:text="Name"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/thirdPlaceLL"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/thirdPlaceIV"
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_default_profile"
+                app:civ_border_color="@color/bronze"
+                app:civ_border_width="1dp"/>
+            <ImageView
+                android:layout_marginTop="-5dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_medal_third"/>
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_points"/>
+                <TextView
+                    android:id="@+id/thirdUserPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textSize="15dp"
+                    android:text="4"
+                    />
+            </LinearLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/thirdPlaceTV"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:text="Name"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/listLL"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/topThreeLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/noEventsCard"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Data\nTry Reloading"
+                android:layout_marginStart="16dp"
+                android:textSize="44sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/grey_subtext"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="240dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/empty_loading"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/eventsRecyclerView"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+</RelativeLayout>

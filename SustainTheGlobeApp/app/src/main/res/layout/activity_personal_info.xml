@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.PersonalInfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/profileLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/aboutYouTV">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_default_profile"
+                />
+            <ImageView
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="-30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="290"
+                android:src="@drawable/ic_edit"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/aboutYouTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/open_sans_extrabold"
+            android:text="About You"
+            android:textColor="@color/accent"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/editUserNameCV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileLL" />
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/editUserNameCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aboutYouTV"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="6dp"
+                android:drawableTint="#535061"
+                android:ems="10"
+                android:fontFamily="@font/open_sans_semibold"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                android:textSize="40px" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bioCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editUserNameCV"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_description"
+                        app:tint="#535061" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Tell us about yourself"
+                        android:textColor="@color/grey_subtext"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="I like to help out by....."
+                    android:textColor="@color/grey_subtext"
+                    android:textColorHint="@color/grey_subtext"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/editTextCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bioCV"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_gender"
+                    app:tint="#535061"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Gender"
+                    android:textColor="@color/grey_subtext"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/maleCV"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/secondary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:strokeColor="@color/accent"
+                        app:strokeWidth="2dp">
+                        <ImageButton
+                            android:id="@+id/maleImageView"
+                            android:padding="16dp"
+                            android:background="@color/primary_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_male">
+
+                        </ImageButton>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/femaleCV"
+
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/secondary"
+                        android:layout_width="0dp"
+                        app:strokeColor="@color/grey_subtext"
+                        app:strokeWidth="2dp"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            android:id="@+id/femaleImageView"
+
+                            android:padding="16dp"
+                            android:background="@color/secondary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_female">
+
+                        </ImageButton>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/otherCV"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@color/secondary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:strokeColor="@color/grey_subtext"
+                        app:strokeWidth="2dp">
+                        <ImageButton
+                            android:id="@+id/otherImageView"
+
+                            android:padding="16dp"
+                            android:background="@color/secondary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_other">
+
+                        </ImageButton>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/locationCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCV"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/locationTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawablePadding="6dp"
+                    android:drawableTint="#535061"
+                    android:ems="10"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:hint="Tap to get location"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:textSize="40px" />
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ImageButton
+            android:id="@+id/btnContinue"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_circle_button"
+            android:fontFamily="@font/open_sans_semibold"
+            android:src="@drawable/ic_right_arrow"
+            android:textSize="42sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationCV"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/continueTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Continue"
+            android:textColor="@color/accent"
+            android:textSize="48px"
+            app:layout_constraintEnd_toStartOf="@+id/btnContinue"
+            app:layout_constraintTop_toBottomOf="@+id/locationCV" />
+
+
+
+        <TextView
+            android:id="@+id/btnSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Not Your Profile?\nSignOut"
+            android:textAlignment="center"
+            android:textColor="@color/accent"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/continueTV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

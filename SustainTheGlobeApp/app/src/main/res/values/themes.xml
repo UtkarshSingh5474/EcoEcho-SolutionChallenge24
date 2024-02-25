@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.SustainTheGlobe" parent="Theme.Material3.Light.NoActionBar" >
+
+        <item name="colorPrimary">@color/primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+
+        <item name="colorAccent">@color/primary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorAccent</item>
+    </style>
+
+    <style name="ChipUncheckedText" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textColor">@color/grey_subtext</item>
+    </style>
+
+
+</resources>

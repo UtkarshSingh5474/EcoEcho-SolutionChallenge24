@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    tools:context="com.example.sustaintheglobe.MainActivity">
+
+    <TextView
+        android:id="@+id/no_internet"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Internet!\nRetry After Connecting To Internet"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textSize="34sp"
+        android:textColor="@color/grey_subtext"
+        android:textAlignment="textStart"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"/>
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_navigation"
+        abb_selectedIndex="0"
+        abb_selectedTabId="@+id/nav_connect"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/secondary"
+        android:elevation="1dp"
+        app:abb_iconSize="28dp"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorColor="@color/primary"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorLocation="bottom"
+        app:abb_indicatorMargin="16dp"
+        app:abb_selectedTabType="text"
+        app:abb_tabColor="@color/grey_subtext"
+        app:abb_tabColorDisabled="@color/grey_subtext"
+        app:abb_tabColorSelected="@color/primary"
+        app:abb_tabs="@menu/bottom_navigation"
+        app:abb_textSize="16sp"
+        app:abb_textStyle="bold"
+
+        />
+
+</RelativeLayout>
