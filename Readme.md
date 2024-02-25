@@ -1,12 +1,12 @@
-#EcoEcho - GDSC Solution Challenge '24 Submission
+# EcoEcho - GDSC Solution Challenge '24 Submission
 
 ## Codebases
 1. Native Android App - SustainTheGlobeApp (EcoEcho-SolutionChallenge24/SustainTheGlobeApp/)
 2. React based Progressive Web App - sustaintheglobe-web (EcoEcho-SolutionChallenge24/sustaintheglobe-web/)
 
 ## Installation and Usage
-1. Android App - 
-2. Progressive Web App - https://sustain-globe.netlify.app/
+1. Android App - To install the app, download the [APK File](https://github.com/UtkarshSingh5474/EcoEcho-SolutionChallenge24/blob/main/SustainTheGlobeApp/app-debug.apk) and install it on your Android device.
+2. Progressive Web App - [Visit Site](https://sustain-globe.netlify.app/)
 
 ## Problem Statement
 In today's world, the global community is facing urgent challenges related to climate change, environmental degradation, and unsustainable consumption patterns. Individuals often lack accessible and engaging tools to participate in meaningful sustainability actions tailored to their daily lives. Despite growing awareness of these issues, there remains a gap in easily adopting and tracking personal sustainability practices.
