@@ -1,10 +1,10 @@
 
 
-<img src='https://raw.githubusercontent.com/RamGoel/sustaintheglobe-web/master/src/assets/icons/icon.png?token=GHSAT0AAAAAACOQQCWXNTS4HS4SMZ6GFZ4WZO3EYSA' width=100 height=100>
+<img src='https://raw.githubusercontent.com/UtkarshSingh5474/EcoEcho-SolutionChallenge24/main/sustaintheglobe-web/src/assets/icons/icon.png' width=100 height=100>
 
-# Sustain The Globe
+# EcoEcho
 
-SustainTheGlobe is a gamification based application which assigns nature friendly tasks to users which help them reduce their carbon footprint.
+EcoEcho is a gamification based application which assigns nature friendly tasks to users which help them reduce their carbon footprint. It is a Progressive Web Application, which is installable on various types of devices like `android`, `ios`, `windows` or `macOS`.
 
 
 
