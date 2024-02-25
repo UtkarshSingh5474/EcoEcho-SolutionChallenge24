@@ -76,6 +76,9 @@ public class ProfileFragment extends Fragment {
             prefs.edit().clear().apply();
 
             startActivity(intent);
+            getActivity().finish();
+
+
 
 //            TaskHelper firestoreHelper = new TaskHelper();
 //

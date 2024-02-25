@@ -6,6 +6,7 @@ export interface PostProps {
   imageLink: string;
   likes: string[];
   location: string;
+  category: string;
   postID: string;
   postTime: any;
   taskID: string;

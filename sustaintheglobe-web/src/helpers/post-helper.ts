@@ -42,11 +42,29 @@ export const fetchCompletePostList = async (
   for (let i = 0; i < postDocs.length; i++) {
     const userSnapshot = await getDoc(doc(db, "Users", postDocs[i].userID));
     if (userSnapshot.exists()) {
-      let data = userSnapshot.data();
-      postsWithusers.push({
-        ...postDocs[i],
-        user: data,
-      });
+      const taskSnapshot = await getDoc(
+        doc(
+          db,
+          `Users/${userSnapshot.data().userID}/allUserTasks/${
+            postDocs[i].taskID
+          }`
+        )
+      );
+
+      if (taskSnapshot.exists()) {
+        const masterTaskSnapshot = await getDoc(
+          doc(db, `Tasks/${taskSnapshot.data().masterTaskID}`)
+        );
+        if (masterTaskSnapshot.exists()) {
+          let data = userSnapshot.data();
+          let masterTaskData = masterTaskSnapshot.data();
+          postsWithusers.push({
+            ...postDocs[i],
+            user: data,
+            category: masterTaskData.category,
+          });
+        }
+      }
     }
   }
 

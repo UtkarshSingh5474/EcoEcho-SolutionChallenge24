@@ -16,7 +16,7 @@ export interface UserProps {
   posts?: PostProps[]; // You might want to define a type for posts
   profileComplete?: boolean;
   streak?: number;
-  userID?: string;
+  userID: string;
   username?: string;
   cityName: string;
   password?: string;

@@ -5,3 +5,4 @@ import Router from './pages/router'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Router />
 )
+

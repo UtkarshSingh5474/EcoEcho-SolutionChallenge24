@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustain The Globe</title>
+    <meta name="theme-color" content="#a2f5b4" />
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/worker.ts').then((registration) => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          }, (err) => {
+            console.log('Service Worker registration failed:', err);
+          });
+        });
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

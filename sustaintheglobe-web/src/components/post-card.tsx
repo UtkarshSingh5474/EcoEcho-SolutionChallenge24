@@ -15,7 +15,7 @@ const PostCard = ({ postData, userData, likeHandler }: { postData: PostProps, us
                 <p className="text-center text-green-500 font-semibold">{likes.length}</p>
             </div>
             <div className="py-2">
-                <h2 className="text-xl font-semibold">{'Waste Recycling'}</h2>
+                <h2 className="text-xl font-semibold">{postData.category}</h2>
                 <p className="text-sm text-gray-400">Caption: {caption}</p>
             </div>
             <div className="flex items-center justify-between">
