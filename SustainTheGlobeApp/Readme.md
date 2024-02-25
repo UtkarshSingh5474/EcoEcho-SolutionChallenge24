@@ -1,3 +1,7 @@
+## Try it
+To install the app, download the [APK File](https://github.com/UtkarshSingh5474/EcoEcho-SolutionChallenge24/blob/main/SustainTheGlobeApp/app-debug.apk) and install it on your Android device.
+
+
 ## Technologies Used
 
 - Android Studio: The Android app is built using Android Studio, which provides a comprehensive integrated development environment (IDE) for Android application development.
