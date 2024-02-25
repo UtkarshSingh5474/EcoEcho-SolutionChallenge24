@@ -4,6 +4,10 @@
 1. Native Android App - SustainTheGlobeApp (EcoEcho-SolutionChallenge24/SustainTheGlobeApp/)
 2. React based Progressive Web App - sustaintheglobe-web (EcoEcho-SolutionChallenge24/sustaintheglobe-web/)
 
+## Installation and Usage
+1. Android App - 
+2. Progressive Web App - https://sustain-globe.netlify.app/
+
 ## Problem Statement
 In today's world, the global community is facing urgent challenges related to climate change, environmental degradation, and unsustainable consumption patterns. Individuals often lack accessible and engaging tools to participate in meaningful sustainability actions tailored to their daily lives. Despite growing awareness of these issues, there remains a gap in easily adopting and tracking personal sustainability practices.
 
