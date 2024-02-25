@@ -64,3 +64,7 @@ The app provides a calming and positive user interface, encouraging engagement a
   - Integrated into both Android Native and Progressive Web Apps for tracking user behavior.
 - **Cloud Messaging:**
   - Utilized within backend logic (Cloud Functions) to trigger notifications based on user activity.
+    
+ ## Previews
+ <img src="https://github.com/UtkarshSingh5474/EcoEcho-SolutionChallenge24/blob/main/mock.png" height="895.94229035167px" width="950px">
+
